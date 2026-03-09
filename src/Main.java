@@ -3,12 +3,12 @@ public class Main {
         ERyder bike1 = new ERyder();
         System.out.println("Details of bike1:");
         bike1.printBikeDetails();
-    }
+    
 
-    public static void main(String[] args){
-        ERyder bike2 = new ERyder(1234, 80, true, 120.5)
+    
+        ERyder bike2 = new ERyder("12345",80,false,120.5f);
         System.out.println("Details of bike2:");
         bike2.printBikeDetails();
-    }
 
+}
 }

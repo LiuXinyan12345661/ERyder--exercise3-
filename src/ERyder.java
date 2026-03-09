@@ -3,9 +3,10 @@ public class ERyder {
     private int batteryLevel;
     public boolean isAvailable;
     public float kmDriven;
-}
+
 
 public ERyder(){
+    
 
 }
 
@@ -18,7 +19,7 @@ public ERyder(){
 
 public void ride(){
     if(batteryLevel>0 && isAvailable){
-        System.out.println("The bike is available")
+        System.out.println("The bike is available");
     }else{
         System.out.println("The bike is not available");
     }
@@ -37,5 +38,8 @@ public void printBikeDetails(){
     System.out.println("Bike ID:"+bikeID);
     System.out.println("Battery Level:"+batteryLevel+"%");
     System.out.println("Is Available:" + isAvailable);
+
+}
+
 
 }
