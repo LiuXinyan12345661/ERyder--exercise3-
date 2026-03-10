@@ -1,6 +1,9 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         ERyder bike1 = new ERyder();
+        bike1.setBatterLevel(80);
+        bike1.setAvailable(true);
+        bike1.ride();
         System.out.println("Details of bike1:");
         bike1.printBikeDetails();
     
