@@ -94,6 +94,8 @@ public void printRideDetails(int usageInMinutes) {
         return totalFare;
     }
 
+    
+
 }
 
 
