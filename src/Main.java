@@ -27,5 +27,12 @@ public class Main {
 
         userFeedback.analyseFeedback(false, sent1, sent2, sent3, sent4, sent5);
         System.out.println(userFeedback);
+
+
+
+
+        UserRegistration userReg = new UserRegistration();
+        userReg.registration();
+        System.out.println("\n" + userReg);
     }
 }
