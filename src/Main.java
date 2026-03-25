@@ -34,5 +34,15 @@ public class Main {
         UserRegistration userReg = new UserRegistration();
         userReg.registration();
         System.out.println("\n" + userReg);
+
+
+
+
+        AdminPanel adminPanel = new AdminPanel();
+        adminPanel.userManagementOptions();
+
+
+
+
     }
 }
