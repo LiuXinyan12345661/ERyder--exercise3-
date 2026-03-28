@@ -194,6 +194,29 @@ public class AdminPanel {
 
         System.out.println("User updated successfully!");
     }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("=== Admin Panel ===");
+        System.out.println("1. Demo the Bike Rental System");
+        System.out.print("Choose option: ");
+        int choice = scanner.nextInt();
+
+        if (choice == 1) {
+            BikeRental bikeRental = new BikeRental();
+            bikeRental.simulateApplicationInput();
+        }
+
+        scanner.close();
+    }
+
+
+
+
+
+
+
+
 }
 
 

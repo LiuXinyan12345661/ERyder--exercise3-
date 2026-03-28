@@ -43,7 +43,7 @@ public class UserRegistration {
             userType = "VIP User";
         }else{
             System.out.println("Invaild choice.Please restart the registration process");
-
+            scanner.close();
             return;
         }
     
