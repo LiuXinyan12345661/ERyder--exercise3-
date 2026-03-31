@@ -1,82 +1,31 @@
-import java.time.LocalDateTime;
-
 public class Bike {
-    private String bikeID;
-    private boolean isAvailable;
-    private int batteryLevel;
-    private LocalDateTime lastUsedTime;
+    private String bikeId;
     private String location;
+    private boolean isAvailable;
 
-
-    public Bike(String bikeID,boolean isAvailable,int batteryLevel,LocalDateTime lastUsedTime,String location){
-        this.bikeID = bikeID;
+    public Bike(String bikeId, String location, boolean isAvailable) {
+        this.bikeId = bikeId;
+        this.location = location;
         this.isAvailable = isAvailable;
-        this.lastUsedTime = lastUsedTime;
+    }
+
+    public String getBikeId() {
+        return bikeId;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
         this.location = location;
     }
-
-    public String getBikeID() {
-        return bikeID;
-    }
-
-    
 
     public boolean isAvailable() {
         return isAvailable;
     }
 
-    
-
-    public int getBatteryLevel(){
-        return batteryLevel;
+    public void setAvailable(boolean available) {
+        isAvailable = available;
     }
-
-    public LocalDateTime getLastUsedTime(){
-        return lastUsedTime;
-    }
-
-    public String getLocation(){
-        return location;
-    }
-
-
-    public void setBikeID(String bikeID){
-        this.bikeID = bikeID;
-    }
-
-    public void setAvailable(boolean Available){
-        isAvailable = Available;
-    }
-
-    public void setBatterLevel(int batteryLevel){
-        this.batteryLevel = batteryLevel;
-    }
-
-    public void setLastUsedTime(LocalDateTime lastUsedTime){
-        this.lastUsedTime = lastUsedTime;
-    }
-
-    public void setLocation(String location){
-        this.location = location;
-    }
-
-    public String toString(){
-        return "Bike{" +
-                "bikeID='" + bikeID + '\'' +
-                ", isAvailable=" + isAvailable +
-                ", batteryLevel=" + batteryLevel +
-                ", lastUsedTime=" + lastUsedTime +
-                ", location='" + location + '\'' +
-                '}';
-    }
-
-
-
-
-
-
-
-
-
-
 }
