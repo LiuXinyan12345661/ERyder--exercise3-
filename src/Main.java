@@ -36,6 +36,11 @@ public class Main {
         System.out.println("\n" + userReg);
 
 
+         ActiveRental ar = new ActiveRental();
+        ar.reserveBike(156, "user@test.com", "Center", true);
+        ar.viewSystemLogs();
+
+
 
 
     
