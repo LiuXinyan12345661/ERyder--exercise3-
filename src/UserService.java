@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -55,4 +56,28 @@ public class UserService {
     public List<RegisteredUsers> getAllUsers() {
         return userDatabase.getUserList();
     }
+    private List<RegisteredUsers> registeredUsersList;
+
+    public UserService() {
+        registeredUsersList = new ArrayList<>();
+    }
+
+    public RegisteredUsers addNewUsers(String userType, String name, String email) {
+        RegisteredUsers newUser;
+        if (userType.equalsIgnoreCase("VIP")) {
+            newUser = new VIPUser(userType,name,email);
+        } else {
+            newUser = new RegularUser(userType,name,email);
+        }
+        registeredUsersList.add(newUser);
+        return newUser;
+    }
+
+    public List<RegisteredUsers> getRegisteredUsersList() {
+        return registeredUsersList;
+    }
+
+
+
+
 }

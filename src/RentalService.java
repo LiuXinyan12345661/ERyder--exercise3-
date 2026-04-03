@@ -50,4 +50,16 @@ public class RentalService {
                 .filter(r -> r.getRentalId().equals(rentalId) && r.isActive())
                 .findFirst();
     }
+
+     public static final double BASE_FARE = 3.0;
+
+    public void simulateApplicationInput(RegisteredUsers user) {
+        removeTrip(user);
+    }
+
+    public void removeTrip(RegisteredUsers user) {
+        double finalFare = user.calculateFare(BASE_FARE);
+        user.displayUserType();
+        System.out.println("Calculated Fare: " + finalFare);
+    }
 }

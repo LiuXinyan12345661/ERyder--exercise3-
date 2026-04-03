@@ -28,4 +28,14 @@ public class RegisteredUsers {
     public void setName(String name) {
         this.name = name;
     }
+
+    public double calculateFare(double baseFare) {
+        return baseFare;
+    }
+
+    public void displayUserType() {
+        System.out.println("Regular User");
+    }
+
+
 }

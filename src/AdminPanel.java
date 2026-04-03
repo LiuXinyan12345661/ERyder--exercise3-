@@ -8,7 +8,6 @@ public class AdminPanel {
     private BikeService bikeService;
     private RentalService rentalService;
 
-    
 
 
 
@@ -241,6 +240,12 @@ public class AdminPanel {
             rentals.forEach(r -> System.out.println("Rental ID=" + r.getRentalId() + ", Bike ID=" + r.getBikeId() + ", User ID=" + r.getUserId()));
         }
     }
+    public void createAndProcessUser(String userType, String fullName, String emailAddress) {
+        RegisteredUsers newUser = userService.addNewUsers(userType, fullName, emailAddress);
+        rentalService.simulateApplicationInput(newUser);
+    }
+
+
 
     public static void main(String[] args) {
         BikeDatabase bikeDB = new BikeDatabase();
